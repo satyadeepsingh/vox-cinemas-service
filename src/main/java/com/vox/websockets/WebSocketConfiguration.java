@@ -80,7 +80,7 @@ public class WebSocketConfiguration {
 					Film film = (Film) evt.getSource(); // <1>
 					Map<String, Film> data = new HashMap<>(); // <2>
 					data.put(film.getSlugLine(), film);
-					return objectMapper.writeValueAsString(data);
+					return objectMapper.writeValueAsString(film);
 				} catch (JsonProcessingException e) {
 					throw new RuntimeException(e);
 				}
